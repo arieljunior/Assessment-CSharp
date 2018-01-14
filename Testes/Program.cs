@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAcces;
+using Modelos;
 
 
 namespace Testes
@@ -11,35 +11,33 @@ namespace Testes
     class Program
     {
         DataAcces.DataAcces dt = new DataAcces.DataAcces();
+        Business.Business bs = new Business.Business();
 
         static void Main(string[] args)
         {
             Program start = new Program();
 
-            //start.TestarSalvarAmigo();
-            //start.TestarExcluirAmigo(1);
+            //start.TestarSalvarAmigo(3,"Alice", "Sousa", new DateTime(2016,02,05));
+            //start.TestarExcluirAmigo(2);
             start.TestarGetAmigos();
+            //start.TestarAtualizarAmigo(3, "Teste", "Teste", new DateTime(1996, 05, 17));
 
             Console.WriteLine("Presciona uma tecla para sair...");
             Console.ReadKey();
 
         }
 
-        void TestarSalvarAmigo()
+        void TestarSalvarAmigo(int id, string nome, string sobrenome, DateTime nasc)
         {
-            var p1 = new PessoaModel("Ariel", new DateTime(2017, 1, 1), "Junior");
-            p1.Id = 1;
-
-            var p2 = new PessoaModel("Maria", new DateTime(2017, 1, 1), "Eduarda");
-            p2.Id = 2;
+            var p1 = new PessoaModel(nome, nasc, sobrenome);
+            p1.Id = id;
 
             dt.Salvar(p1);
-            dt.Salvar(p2);
         }
 
         void TestarExcluirAmigo(int id)
         {
-            dt.Excluir(id);
+            bs.DeletarAmigo(id);
         }
 
         void TestarGetAmigos()
@@ -51,6 +49,11 @@ namespace Testes
                 Console.WriteLine(x.Sobrenome);
                 Console.WriteLine(x.Nascimento+"\n");
             }
+        }
+
+        void TestarAtualizarAmigo(int id, string nome, string sobrenome, DateTime nasc)
+        {
+            bs.AtualizarAmigo(id, nome, sobrenome, nasc);
         }
     }
 }

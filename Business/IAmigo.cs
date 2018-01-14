@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Modelos;
 
 namespace Business
 {
@@ -11,7 +12,7 @@ namespace Business
         void CriarAmigo(PessoaModel pessoa);
         void DeletarAmigo(int id);
         List<PessoaModel> GetAmigos();
-        void AtualizarAmigo(string nome, string sobrenome, DateTime nascimento, int id_amigo);
+        void AtualizarAmigo(int id_amigo, string nome, string sobrenome, DateTime nascimento);
         List<String> getAniversariantes();
     }
 }

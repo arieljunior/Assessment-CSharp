@@ -7,7 +7,7 @@ using Modelos;
 
 namespace Business
 {
-    public class Business
+    public class Business : IAmigo
     {
         private DataAcces.DataAcces dt = new DataAcces.DataAcces();
 
@@ -38,7 +38,33 @@ namespace Business
 
         public void DeletarAmigo(int id)
         {
-            var Amigos = new List<PessoaModel>();
+            var Amigos = dt.GetAmigos();
+
+            if (Amigos.Count != 0)
+            {
+                foreach (var amigo in Amigos)
+                {
+                    if (amigo.Id == id)
+                    {
+                        Amigos.Remove(amigo);
+                        break;
+                    }
+                }
+
+                if (dt.AtualizarDados(Amigos))
+                {
+                    Console.WriteLine("Amigo excluído com sucesso");
+                }
+                else
+                {
+                    Console.WriteLine("Não foi possível excluir seu amigo");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Nenhum amigo cadastrado");
+            }
+            
         }
 
         public List<PessoaModel> GetAmigos()
@@ -46,35 +72,38 @@ namespace Business
             return dt.GetAmigos();
         }
 
-        public void AtualizarAmigo(string nome, string sobrenome, DateTime nascimento, int id_amigo)
+        public void AtualizarAmigo(int id_amigo, string nome, string sobrenome, DateTime nascimento)
         {
 
             List<PessoaModel> Amigos = dt.GetAmigos();
-            PessoaModel AmigoEncontrado = null;
-            foreach (var amigo in Amigos)
-            {
-                if (amigo.Id == id_amigo)
-                {
-                    AmigoEncontrado = amigo;
-                    break;
-                }
-            }
 
-            if (AmigoEncontrado != null)
+            if(Amigos.Count != 0)
             {
-                if (dt.SalvarAmigo(pessoa))
+                foreach (var amigo in Amigos)
                 {
-                    Console.WriteLine("Novo amigo salvo com sucesso");
+                    if (amigo.Id == id_amigo)
+                    {
+                        amigo.Nome = nome;
+                        amigo.Sobrenome = sobrenome;
+                        amigo.Nascimento = nascimento;
+                        break;
+                    }
+                }
+
+                if (dt.AtualizarDados(Amigos))
+                {
+                    Console.WriteLine("Amigo atualizado com sucesso");
                 }
                 else
                 {
-                    Console.WriteLine("Erro ao salvar o amigo");
+                    Console.WriteLine("Não foi possível atualizar seu amigo");
                 }
             }
             else
             {
-                Console.WriteLine("Amigo não encontrado");
+                Console.WriteLine("Nenhum amigo cadastrado");
             }
+
         }
 
         public List<String> getAniversariantes()
@@ -85,15 +114,37 @@ namespace Business
             int DiaAtual = DateTime.Today.Day;
             int MesAtual = DateTime.Today.Month;
 
-            foreach (var amigo in Amigos)
+            if (Amigos.Count != 0)
             {
-                if (amigo.Nascimento.Day == DiaAtual && amigo.Nascimento.Month == MesAtual)
+                foreach (var amigo in Amigos)
                 {
-                    Aniversariantes.Add(amigo.Nome);
+                    if (amigo.Nascimento.Day == DiaAtual && amigo.Nascimento.Month == MesAtual)
+                    {
+                        Aniversariantes.Add(amigo.Nome);
+                    }
                 }
             }
 
             return Aniversariantes;
+        }
+
+        public List<PessoaModel> ProcurarPorNome(string nome)
+        {
+            var Amigos = dt.GetAmigos();
+            List<PessoaModel> AmigosPorNome = null;
+
+            if (Amigos.Count != 0)
+            {
+                foreach (var amigo in Amigos)
+                {
+                    if (amigo.Nome.ToLower().Equals(nome.ToLower()))
+                    {
+                        AmigosPorNome.Add(amigo);
+                    }
+                }
+            }
+
+            return AmigosPorNome;
         }
     }
 }

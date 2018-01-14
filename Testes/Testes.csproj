@@ -62,9 +62,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{44492983-722b-458b-a15a-492536118c7c}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAcces\DataAcces.csproj">
       <Project>{ca85493e-fb7f-48f9-a74a-0fa38a8e1248}</Project>
       <Name>DataAcces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelos\Modelos.csproj">
+      <Project>{b21ade3f-b709-430b-9161-b2d18dc5f529}</Project>
+      <Name>Modelos</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

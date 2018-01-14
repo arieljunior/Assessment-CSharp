@@ -13,7 +13,7 @@ namespace DataAcces
         private StreamWriter Escrever;
         private FileStream Arquivo;
         private StreamReader Ler;
-        private string LocalArquivo = "C:\\Users\\ariel\\Documents\\dados_at.txt";
+        private string LocalArquivo = "C:\\Users\\"+ Environment.UserName + "\\Documents\\dados_at.txt";
 
         private void CriarArquivo()
         {
@@ -103,28 +103,29 @@ namespace DataAcces
             return Amigos;
         }
 
-        public void Excluir(int id)
+        public bool AtualizarDados(List<PessoaModel> Amigos)
         {
-            Ler = File.OpenText(LocalArquivo);
-            int x = 1;
+            CriarArquivo();
 
-            while (Ler.EndOfStream != true)
+            try
             {
-                string linha = Ler.ReadLine();
-                //Console.WriteLine(linha);
-                try
-                {
-                    if (linha.Substring(3).Equals(id.ToString()))
-                    {
-                        Console.WriteLine(linha);
-                    }
-                }
-                catch (Exception ex)
-                {
+                Escrever = File.AppendText(LocalArquivo);
 
+                foreach (var amigo in Amigos)
+                {
+                    Escrever.WriteLine("Id:" + amigo.Id);
+                    Escrever.WriteLine("Nome:" + amigo.Nome);
+                    Escrever.WriteLine("Sobrenome:" + amigo.Sobrenome);
+                    Escrever.WriteLine("Nascimento:" + amigo.Nascimento);
+                    Escrever.WriteLine("##########");
                 }
 
-                x++;
+                Escrever.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
             }
         }
     }
