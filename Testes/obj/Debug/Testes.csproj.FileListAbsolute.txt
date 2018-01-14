@@ -1,0 +1,10 @@
+c:\users\ariel\source\repos\Assessment_Bloco_CSharp\Testes\bin\Debug\Testes.exe.config
+c:\users\ariel\source\repos\Assessment_Bloco_CSharp\Testes\bin\Debug\Testes.exe
+c:\users\ariel\source\repos\Assessment_Bloco_CSharp\Testes\bin\Debug\Testes.pdb
+c:\users\ariel\source\repos\Assessment_Bloco_CSharp\Testes\obj\Debug\Testes.csproj.CoreCompileInputs.cache
+c:\users\ariel\source\repos\Assessment_Bloco_CSharp\Testes\obj\Debug\Testes.exe
+c:\users\ariel\source\repos\Assessment_Bloco_CSharp\Testes\obj\Debug\Testes.pdb
+C:\Users\Ariel\source\repos\Assessment_Bloco_CSharp\Testes\obj\Debug\Testes.csprojResolveAssemblyReference.cache
+C:\Users\Ariel\source\repos\Assessment_Bloco_CSharp\Testes\bin\Debug\DataAcces.exe
+C:\Users\Ariel\source\repos\Assessment_Bloco_CSharp\Testes\bin\Debug\DataAcces.pdb
+C:\Users\Ariel\source\repos\Assessment_Bloco_CSharp\Testes\bin\Debug\DataAcces.exe.config

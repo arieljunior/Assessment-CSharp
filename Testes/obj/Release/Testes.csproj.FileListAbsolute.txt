@@ -1,0 +1,1 @@
+c:\users\ariel\source\repos\Assessment_Bloco_CSharp\Testes\obj\Release\Testes.csproj.CoreCompileInputs.cache

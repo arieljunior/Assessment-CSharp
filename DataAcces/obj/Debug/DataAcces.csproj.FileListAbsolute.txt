@@ -1,0 +1,7 @@
+C:\Users\Ariel\source\repos\Assessment_Bloco_CSharp\DataAcces\obj\Debug\DataAcces.csprojResolveAssemblyReference.cache
+C:\Users\Ariel\source\repos\Assessment_Bloco_CSharp\DataAcces\obj\Debug\DataAcces.csproj.CoreCompileInputs.cache
+C:\Users\Ariel\source\repos\Assessment_Bloco_CSharp\DataAcces\bin\Debug\DataAcces.exe.config
+C:\Users\Ariel\source\repos\Assessment_Bloco_CSharp\DataAcces\bin\Debug\DataAcces.exe
+C:\Users\Ariel\source\repos\Assessment_Bloco_CSharp\DataAcces\bin\Debug\DataAcces.pdb
+C:\Users\Ariel\source\repos\Assessment_Bloco_CSharp\DataAcces\obj\Debug\DataAcces.exe
+C:\Users\Ariel\source\repos\Assessment_Bloco_CSharp\DataAcces\obj\Debug\DataAcces.pdb
