@@ -131,7 +131,7 @@ namespace Business
         public List<PessoaModel> ProcurarPorNome(string nome)
         {
             var Amigos = dt.GetAmigos();
-            List<PessoaModel> AmigosPorNome = null;
+            List<PessoaModel> AmigosPorNome = new List<PessoaModel>();
 
             if (Amigos.Count != 0)
             {

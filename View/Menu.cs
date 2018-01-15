@@ -44,7 +44,7 @@ namespace View
                         EditarAmigo();
                         break;
                     case 4:
-                        Console.WriteLine("Case 2");
+                        Buscar();
                         break;
                     case 5:
                         ListarAmigos();
@@ -115,6 +115,24 @@ namespace View
             Console.WriteLine("Digite a data de nascimento do amigo a ser editado:");
             DateTime dataNascimento = DateTime.Parse(Console.ReadLine());
             business.AtualizarAmigo(id, nome, sobreNome, dataNascimento);
+        }
+
+        private static void Buscar()
+        {
+            Console.WriteLine("Digite o nome do amigo que deseja achar:");
+            var nome = Console.ReadLine();
+            var listaBusca = business.ProcurarPorNome(nome); ;
+            foreach (var amigo in listaBusca)
+            {
+                Console.WriteLine(
+                    "ID: {0}, Nome: {1}, Sobrenome: {2}, Nascimento: {3}",
+                    amigo.Id,
+                    amigo.Nome,
+                    amigo.Sobrenome,
+                    amigo.Nascimento
+                );
+            }
+
         }
     }
 }
