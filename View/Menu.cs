@@ -133,6 +133,7 @@ namespace View
                 {
                     Console.WriteLine("ID incorreto");
                 }
+                AguardarUsuario();
             }
         }
 
