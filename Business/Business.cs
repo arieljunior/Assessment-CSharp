@@ -7,7 +7,7 @@ using Modelos;
 
 namespace Business
 {
-    public class Business : IAmigo
+    public class BusinessClass : IAmigo
     {
         private DataAcces.DataAcces dt = new DataAcces.DataAcces();
 
@@ -108,13 +108,13 @@ namespace Business
 
         public List<String> getAniversariantes()
         {
-            List<String> Aniversariantes = null;
+            List<String> Aniversariantes = new List<string>();
 
             var Amigos = dt.GetAmigos();
             int DiaAtual = DateTime.Today.Day;
             int MesAtual = DateTime.Today.Month;
 
-            if (Amigos.Count != 0)
+            if (Amigos.Count > 0)
             {
                 foreach (var amigo in Amigos)
                 {

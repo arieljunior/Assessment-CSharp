@@ -18,3 +18,13 @@ C:\Users\Ariel\Desktop\Assessment-CSharp\DataAcces\obj\Debug\DataAcces.csprojRes
 C:\Users\Ariel\Desktop\Assessment-CSharp\DataAcces\obj\Debug\DataAcces.csproj.CoreCompileInputs.cache
 C:\Users\Ariel\Desktop\Assessment-CSharp\DataAcces\obj\Debug\DataAcces.exe
 C:\Users\Ariel\Desktop\Assessment-CSharp\DataAcces\obj\Debug\DataAcces.pdb
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\DataAcces\bin\Debug\DataAcces.exe.config
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\DataAcces\bin\Debug\DataAcces.exe
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\DataAcces\bin\Debug\DataAcces.pdb
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\DataAcces\bin\Debug\Modelos.exe
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\DataAcces\bin\Debug\Modelos.pdb
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\DataAcces\bin\Debug\Modelos.exe.config
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\DataAcces\obj\Debug\DataAcces.csprojResolveAssemblyReference.cache
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\DataAcces\obj\Debug\DataAcces.csproj.CoreCompileInputs.cache
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\DataAcces\obj\Debug\DataAcces.exe
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\DataAcces\obj\Debug\DataAcces.pdb
