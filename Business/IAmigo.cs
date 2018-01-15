@@ -9,7 +9,7 @@ namespace Business
 {
     interface IAmigo
     {
-        void CriarAmigo(PessoaModel pessoa);
+        bool CriarAmigo(PessoaModel pessoa);
         void DeletarAmigo(int id);
         List<PessoaModel> GetAmigos();
         void AtualizarAmigo(int id_amigo, string nome, string sobrenome, DateTime nascimento);

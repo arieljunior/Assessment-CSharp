@@ -61,44 +61,49 @@ namespace DataAcces
 
         public List<PessoaModel> GetAmigos()
         {
-            Ler = File.OpenText(LocalArquivo);
             var Amigos = new List<PessoaModel>();
-            int id = 0;
-            string nome = null;
-            string sobrenome = null;
-            DateTime nascimento = new DateTime();
 
-            while (Ler.EndOfStream != true)
+            if (File.Exists(LocalArquivo))
             {
-                string linha = Ler.ReadLine();
-                
+                Ler = File.OpenText(LocalArquivo);
+                int id = 0;
+                string nome = null;
+                string sobrenome = null;
+                DateTime nascimento = new DateTime();
 
-                if (linha.Substring(0, 2).Equals("Id"))
+                while (Ler.EndOfStream != true)
                 {
-                    id = int.Parse(linha.Substring(3));
-                }
-                else if (linha.Substring(0, 4).Equals("Nome"))
-                {
-                    nome = linha.Substring(5);
-                }
-                else if (linha.Substring(0, 9).Equals("Sobrenome"))
-                {
-                    sobrenome = linha.Substring(10);
-                }
-                else if (linha.Substring(0, 10).Equals("Nascimento"))
-                {
-                    nascimento = DateTime.Parse(linha.Substring(11));
+                    string linha = Ler.ReadLine();
 
+
+                    if (linha.Substring(0, 2).Equals("Id"))
+                    {
+                        id = int.Parse(linha.Substring(3));
+                    }
+                    else if (linha.Substring(0, 4).Equals("Nome"))
+                    {
+                        nome = linha.Substring(5);
+                    }
+                    else if (linha.Substring(0, 9).Equals("Sobrenome"))
+                    {
+                        sobrenome = linha.Substring(10);
+                    }
+                    else if (linha.Substring(0, 10).Equals("Nascimento"))
+                    {
+                        nascimento = DateTime.Parse(linha.Substring(11));
+
+                    }
+                    else if (linha.Equals("##########"))
+                    {
+                        var Amigo = new PessoaModel(nome, nascimento, sobrenome);
+                        Amigo.Id = id;
+                        Amigos.Add(Amigo);
+                    }
                 }
-                else if (linha.Equals("##########"))
-                {
-                    var Amigo = new PessoaModel(nome, nascimento, sobrenome);
-                    Amigo.Id = id;
-                    Amigos.Add(Amigo);
-                }
+
+                Ler.Close();
             }
-
-            Ler.Close();
+            
 
             return Amigos;
         }
