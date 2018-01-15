@@ -11,7 +11,7 @@ namespace Testes
     class Program
     {
         DataAcces.DataAcces dt = new DataAcces.DataAcces();
-        Business.Business bs = new Business.Business();
+        Business.BusinessClass bs = new Business.BusinessClass();
 
         static void Main(string[] args)
         {

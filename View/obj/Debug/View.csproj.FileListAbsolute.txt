@@ -1,0 +1,16 @@
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\bin\Debug\View.exe.config
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\bin\Debug\View.exe
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\bin\Debug\View.pdb
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\obj\Debug\View.csprojResolveAssemblyReference.cache
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\obj\Debug\View.exe
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\obj\Debug\View.pdb
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\bin\Debug\Business.exe
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\bin\Debug\DataAcces.exe
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\bin\Debug\Modelos.exe
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\bin\Debug\Business.pdb
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\bin\Debug\Business.exe.config
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\bin\Debug\DataAcces.pdb
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\bin\Debug\DataAcces.exe.config
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\bin\Debug\Modelos.pdb
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\View\bin\Debug\Modelos.exe.config

@@ -1,0 +1,6 @@
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\Modelos\bin\Debug\Modelos.exe.config
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\Modelos\bin\Debug\Modelos.exe
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\Modelos\obj\Debug\Modelos.exe
+C:\Users\Administrador.DSRH-LAP09\source\repos\Assessment-CSharp\Modelos\obj\Debug\Modelos.pdb
