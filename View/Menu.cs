@@ -28,7 +28,8 @@ namespace View
                 Console.WriteLine("[2] Apagar amigo");
                 Console.WriteLine("[3] Editar amigo");
                 Console.WriteLine("[4] Buscar amigo");
-                Console.WriteLine("[5] Finalizar programa");
+                Console.WriteLine("[5] Listar amigos");
+                Console.WriteLine("[6] Finalizar programa");
                 string optionRecive = Console.ReadLine();
                 int option = Convert.ToInt32(optionRecive);
                 switch (option)
@@ -40,12 +41,15 @@ namespace View
                         DeletarOption();
                         break;
                     case 3:
-                        Console.WriteLine("Case 2");
+                        EditarAmigo();
                         break;
                     case 4:
                         Console.WriteLine("Case 2");
                         break;
                     case 5:
+                        ListarAmigos();
+                        break;
+                    case 6:
                         runing = false;
                         Console.WriteLine("Aperte qualquer tecla para fechar");
                         Console.ReadKey();
@@ -78,14 +82,39 @@ namespace View
 
         private static void DeletarOption()
         {
-            var listaAmigosDeletar = business.GetAmigos();
-            foreach (var amigo in listaAmigosDeletar)
-            {
-                Console.WriteLine("ID: {0}, Nome: {1}, Sobrenome: {2}", amigo.Id, amigo.Nome, amigo.Sobrenome);
-            }
+            ListarAmigos();
             Console.WriteLine("Digite o ID do amigo a ser deletado: ");
             var idParaDeletar = Int32.Parse(Console.ReadLine());
             business.DeletarAmigo(idParaDeletar);
+        }
+
+        private static void ListarAmigos()
+        {
+            var listaAmigosDeletar = business.GetAmigos();
+            foreach (var amigo in listaAmigosDeletar)
+            {
+                Console.WriteLine(
+                    "ID: {0}, Nome: {1}, Sobrenome: {2}, Nascimento: {3}",
+                    amigo.Id,
+                    amigo.Nome,
+                    amigo.Sobrenome,
+                    amigo.Nascimento
+                );
+            }
+        }
+
+        private static void EditarAmigo()
+        {
+            ListarAmigos();
+            Console.WriteLine("Digite o ID do amigo a ser editado: ");
+            var id = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o nome do amigo a ser editado: ");
+            var nome = Console.ReadLine();
+            Console.WriteLine("Digite o sobrenome do amigo a ser editado: ");
+            var sobreNome = Console.ReadLine();
+            Console.WriteLine("Digite a data de nascimento do amigo a ser editado:");
+            DateTime dataNascimento = DateTime.Parse(Console.ReadLine());
+            business.AtualizarAmigo(id, nome, sobreNome, dataNascimento);
         }
     }
 }
